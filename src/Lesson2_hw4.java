@@ -9,12 +9,11 @@ public class Lesson2_hw4 {
         Scanner input = new Scanner(System.in);
         System.out.println("Someone's birthday: ");
         String D = input.nextLine();
-        LocalDate s1 = LocalDate.parse(D, DateTimeFormatter.ofPattern("dd/MM/yyyy"));
-
-        String Now = "26/10/2022";
-        LocalDate s2 = LocalDate.parse(Now, DateTimeFormatter.ofPattern("dd/MM/yyyy"));
+        LocalDate Birthday = LocalDate.parse(D, DateTimeFormatter.ofPattern("dd/MM/yyyy"));
+        LocalDate timeNow = LocalDate.now();
         // Tính tuổi
-        int age = s2.getYear()-s1.getYear();
+        int age = timeNow.getYear()-Birthday.getYear();
         System.out.println("Age=" +age);
     }
 }
+
